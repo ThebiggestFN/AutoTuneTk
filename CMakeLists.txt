@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.22)
-project(AutoTuneTK VERSION 0.1.0)
+project(AutoTuneTK VERSION 0.2.0)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -26,7 +26,9 @@ juce_add_plugin(AutoTuneTK
 
 target_sources(AutoTuneTK PRIVATE
     Source/PluginProcessor.cpp
-    Source/PluginProcessor.h)
+    Source/PluginProcessor.h
+    Source/PluginEditor.cpp
+    Source/PluginEditor.h)
 
 target_compile_definitions(AutoTuneTK PUBLIC
     JUCE_WEB_BROWSER=0
